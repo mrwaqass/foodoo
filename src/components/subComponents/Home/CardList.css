@@ -1,0 +1,27 @@
+/* 
+====== 
+Cards List 
+======
+*/
+.cardListConatiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sectionTitle {
+    font-size: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+}
+
+.totalItems {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.filterContainer {
+    text-align: center;
+}

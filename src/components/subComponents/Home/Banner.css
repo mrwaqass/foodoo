@@ -1,0 +1,55 @@
+.banner {
+    height: 30rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Banner Styles according to the Page */
+.bgHome {
+    background: #42275a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #734b6d,
+        #42275a
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #734b6d,
+        #42275a
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.bgCategories {
+    background: #c04848; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to left,
+        #480048,
+        #c04848
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #480048,
+        #c04848
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.bgAbout {
+    background: #7474bf; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to left,
+        #348ac7,
+        #7474bf
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #348ac7,
+        #7474bf
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@media (max-width: 767px) {
+    .banner {
+        height: 20rem;
+    }
+}

@@ -1,13 +1,370 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap');
+:root {
+    --clr-primary: #42275a;
+    --clr-secondary: #0bb4a6;
+    --clr-tertiary: #949392;
+    --clr-primary-darker: #0bb4a6;
+    --clr-secondary-darker: #ffbb00;
+    --clr-tertiary-darker: #8a42fd;
+    --clr-primary-opacity: #42275acc;
+    --clr-secondary-opacity: #ffcd0331;
+    --clr-tertiary-opacity: #ff58602d;
+    --radius: 999px;
+    --radius-btn: 10px;
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --clr-black: #222;
+    --clr-black-light: rgb(46, 45, 45);
+    --transition: all 0.2s linear;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--clr-grey-1);
+    line-height: 1.5;
+    font-size: 1.8rem;
+}
+.section {
+    padding: 3rem 5rem;
+}
+
+/* ------------- */
+/* Utilities */
+/* ------------ */
+
+.MT2 {
+    margin-top: 2rem;
+}
+.MT1 {
+    margin-top: 1rem;
+}
+.MT3 {
+    margin-top: 3rem;
+}
+.MT4 {
+    margin-top: 4rem;
+}
+.MT5 {
+    margin-top: 5rem;
+}
+.MB1 {
+    margin-bottom: 1rem;
+}
+.MB2 {
+    margin-bottom: 2rem;
+}
+.MB3 {
+    margin-bottom: 3rem;
+}
+.MB4 {
+    margin-bottom: 4rem;
+}
+.MB5 {
+    margin-bottom: 5rem;
+}
+.ML05 {
+    margin-left: 0.5rem;
+}
+.MT05 {
+    margin-top: 0.5rem;
+}
+.MB05 {
+    margin-bottom: 0.5rem;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: var(--clr-black);
+}
+a:hover {
+    color: var(--clr-primary) !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    letter-spacing: var(--spacing);
+    line-height: 1.25;
+}
+p {
+    color: var(--clr-black);
+}
+h5 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+h1 {
+    font-size: 6rem;
+    font-weight: 700;
+}
+h2 {
+    font-size: 4.8rem;
+    font-size: 600;
+}
+svg {
+    font-size: 2.2rem !important;
+}
+input {
+    font-size: 1.8rem;
+    /* font-weight: 600; */
+    border-radius: 100px;
+    width: 40rem;
+    padding: 1rem;
+    transition: var(--transition);
+    outline-width: 0;
+    border: none;
+    color: var(--clr-primary);
+}
+.colorPrimary {
+    color: var(--clr-primary);
+}
+.h1 {
+    font-size: 5rem;
+    font-weight: 700;
+}
+.h2 {
+    font-size: 3.2rem;
+}
+.subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+}
+.textWhite {
+    color: var(--clr-white);
+}
+.image {
+    object-fit: cover;
+    width: 100%;
+    border-radius: var(--radius-btn);
+}
+.image:hover {
+    cursor: pointer;
+    filter: drop-shadow(2px solid black);
+}
+.sectionSubtitle {
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.iconCustom {
+    color: var(--clr-primary);
+    transform: scale(3);
+    /* width: 5.5rem !important;
+    height: auto !important; */
+    margin: 1rem !important;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.iconCustom:hover {
+    transform: scale(3.2);
+}
+.tooltip {
+    font-size: 1.4rem !important;
+    padding: 0.7rem 1rem !important;
+    color: var(--clr-white) !important;
+    font-weight: 400 !important;
+}
+
+/* ------------- */
+/* Buttons */
+/* ------------ */
+
+.btn {
+    display: inline-block !important;
+    padding: 1rem 2rem !important;
+    border-radius: var(--radius-btn) !important;
+    border: none !important;
+    color: var(--clr-black) !important;
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    font-family: inherit !important;
+    text-transform: none !important;
+    line-height: 1.8rem !important;
+    cursor: pointer;
+    background: transparent !important;
+    transition: var(--transition) !important;
+    position: relative !important;
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0rem;
+}
+.btn:active .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    background: var(--clr-secondary);
+}
+
+.btnPrimary,
+.btnPrimaryOutlined:hover {
+    background: var(--clr-primary) !important;
+    color: var(--clr-white) !important;
+}
+.btnPrimaryOutlined {
+    background: transparent !important;
+    color: inherit;
+}
+.btnPrimary:hover {
+    background: var(--clr-secondary) !important;
+}
+.btnOutlined {
+    border: 1px solid #ccc !important;
+    border-radius: 25px !important;
+    font-weight: 400 !important;
+    font-size: 1.4rem !important;
+    padding: 0.7rem 1.2rem !important;
+    margin-right: 1rem !important;
+    margin-top: 1rem !important;
+}
+
+.btnBlack {
+    background: var(--clr-black) !important;
+    color: var(--clr-white) !important;
+}
+.btnBlack:hover {
+    background: var(--clr-black-light) !important;
+}
+.btnWhite {
+    background: var(--clr-white) !important;
+    color: var(--clr-black) !important;
+}
+
+/* ------------- */
+/* Card Component */
+/* ------------ */
+
+.card {
+    transition: var(--transition);
+    border-radius: var(--radius-btn);
+    position: relative;
+    max-width: fit-content;
+    display: inline-block;
+}
+.card:hover,
+.card:active {
+    transform: scale(1.03);
+}
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.cardFooter {
+    padding: 1rem 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.cardFooterTitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.cardFooterSubtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+.cardPrice {
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    color: var(--clr-tertiary);
+}
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 2rem;
+    width: 90%;
+    margin: 8rem auto;
+    text-align: center;
+}
+.cardTag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.1rem 1rem;
+    background: var(--clr-secondary);
+    color: var(--clr-white);
+    border-radius: 3px;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 699px) {
+    .cardsContainer {
+        margin-top: 4rem;
+        width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    }
+}
+
+.loading {
+    margin: 3rem;
+    text-align: center;
+}
+
+/* Single links Column Sub Component */
+
+.singleLinksColumn {
+    background: transparent;
+}
+
+/* Matirial Ui  */
+.MuiFab-primary {
+    background: var(--clr-primary-darker) !important;
+    color: var(--clr-white);
+}
+.MuiFab-primary:hover {
+    background: var(--clr-primary) !important;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .h1 {
+        font-size: 3.2rem;
+    }
+    input {
+        width: 25rem;
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 427px) {
+    .h1 {
+        font-size: 2.5rem;
+    }
+    input {
+        width: 20rem;
+        font-size: 1.5rem;
+    }
 }

@@ -1,0 +1,24 @@
+.singleItemRightItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.singleItemRightItem > * {
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+.singleItemRightItemTitle {
+    background: var(--clr-primary-opacity);
+    padding: 0.1rem 0.5rem;
+    border-radius: 5px;
+}
+.singleItemRightItemTitle > p {
+    color: var(--clr-white);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.singleItemRightItemInfo > p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}

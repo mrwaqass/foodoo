@@ -1,0 +1,21 @@
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+.categoryItem {
+    margin: 0.5rem;
+    background: var(--clr-secondary);
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0.4rem 1rem;
+    transition: var(--transition);
+    border-radius: 5px;
+}
+.categoryItem:hover {
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    cursor: pointer;
+}

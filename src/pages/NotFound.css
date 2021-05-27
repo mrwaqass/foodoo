@@ -1,0 +1,15 @@
+/* 
+====== 
+Not Found
+======
+*/
+.notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.notFoundContainer {
+    text-align: center;
+    text-transform: capitalize;
+}
